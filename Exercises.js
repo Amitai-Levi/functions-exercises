@@ -23,11 +23,25 @@ function allCombinations(str) {
   //
   return combinations;
 }
-
 //Question 3
 function allCaps(str) {
   // your code here
-  return "";
+  let resolt = "";
+  let wordStart = true;
+
+  for (let i = 0; i < str.length; i++) {
+    if (wordStart) {
+      resolt += str[i].toUpperCase();
+      wordStart = false;
+    } else {
+      resolt += str[i];
+    }
+    if (str[i] === " ") {
+      wordStart = true;
+    }
+  }
+
+  return resolt;
 }
 
 //Question 4
