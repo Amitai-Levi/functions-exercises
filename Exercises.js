@@ -13,7 +13,13 @@ function myReverse(str) {
 function allCombinations(str) {
   let combinations = [];
   // your code here
-
+  for (let i = 0; i < str.length; i++) {
+    let comb = "";
+    for (let x = i; x < str.length; x++) {
+      comb += str[x];
+      combinations.push(comb);
+    }
+  }
   //
   return combinations;
 }
